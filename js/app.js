@@ -1020,6 +1020,15 @@ newTaskSave.addEventListener('click', async () => {
     return;
   }
 
+  if (!dateVal) {
+  alert('Please enter a deadline');
+  return;
+}
+
+if (!subject_id) {
+  alert('Please select a subject');
+  return;
+}
   const due_at = dateVal ? new Date(dateVal).toISOString() : '';
 
   const newTask = {
